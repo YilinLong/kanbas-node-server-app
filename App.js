@@ -11,7 +11,8 @@ import EnrollmentRoutes from "./Kanbas/Enrollments/routes.js";
 const app = express();
 
 app.use(cors( {credentials: true,
-        origin: process.env.NETLIFY_URL || "http://localhost:3000",
+        // origin: process.env.NETLIFY_URL || "http://localhost:3000",
+    origin: true
     })
 );
 const sessionOptions = {
