@@ -5,7 +5,10 @@ let { users } = db;
 //     users = [...users, newUser];
 //     return newUser;
 // };
-export const createUser = (user) => (users = [...users, { ...user, _id: Date.now() }]);
+export const createUser = (user) => {
+    users = [...users, user];
+    return user;
+};
 export const findAllUsers = () => users;
 export const findUserById = (userId) => users.find((user) => user._id === userId);
 export const findUserByUsername = (username) => users.find((user) => user.username === username);
